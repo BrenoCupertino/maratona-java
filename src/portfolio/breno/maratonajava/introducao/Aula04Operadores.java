@@ -13,5 +13,6 @@ public class Aula04Operadores {
         System.out.println(isBigger);
 
         // Lógicos: && (AND), || (OR)
+        // Atribuição: =, +=, -=, *=, /=, %=, ++, --
     }
 }
