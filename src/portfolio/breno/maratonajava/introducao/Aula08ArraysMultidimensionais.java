@@ -4,6 +4,10 @@ public class Aula08ArraysMultidimensionais {
     public static void main(String[] args) {
         //Nesse tipo de array é sempre obrigatorio definir o tamanho do primeiro array
         int[][] lis = new int[2][];
+        lis[0] = new int[2];
+        lis[1] = new int[5];
+        lis[2] = new int[3];
+
         int[][] lis2 = {{1, 2}, {3, 4}};
         int[][] list3 = new int[][]{{1, 2}, {3, 4}};
 
