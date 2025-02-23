@@ -1,27 +1,33 @@
 package portfolio.breno.maratonajava.javacore.Bintroducaometodos.dominio;
 
 public class Funcionario {
-    public String name;
-    public double salary;
-    public int age;
+    private String name;
+    private double[] salarios;
+    private int age;
+    private double media;
 
-    public Funcionario(String name, double salary, int age) {
+    public Funcionario(String name, double[] salary, int age) {
         this.name = name;
-        this.salary = salary;
+        this.salarios = salary;
         this.age = age;
     }
 
     public void imprime(){
         System.out.println("-------------");
-        System.out.println("Nome: " + this.name + "\nIdade: " + this.age + "\nSalario: " + this.salary);
+        System.out.println("Nome: " + this.name + "\nIdade: " + this.age + "\nSalario: " + this.salarios);
     }
 
-    public static void mediaSalario(double ...salarios) {
-        double soma = 0;
-        for(double salario: salarios) {
-            soma += salario;
+    public void mediaSalario() {
+        for(double salario: this.salarios) {
+            media += salario;
         }
+         media = media / this.salarios.length;
+
         System.out.println("-------------");
-        System.out.println("Média salarios: " + soma / salarios.length);
+        System.out.println("Média salarios: " + media);
+    }
+
+    public double[] getSalary() {
+        return salarios;
     }
 }

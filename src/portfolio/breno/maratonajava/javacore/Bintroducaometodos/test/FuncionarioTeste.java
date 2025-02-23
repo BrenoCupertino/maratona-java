@@ -4,14 +4,8 @@ import portfolio.breno.maratonajava.javacore.Bintroducaometodos.dominio.Funciona
 
 public class FuncionarioTeste {
     public static void main(String[] args) {
-        Funcionario f1 = new Funcionario("Junior", 2500, 25);
-        Funcionario f2 = new Funcionario("Maria", 4000, 45);
-        Funcionario f3 = new Funcionario("José", 9000, 30);
+        Funcionario f1 = new Funcionario("Junior", new double[]{2500, 1300, 1800}, 25);
 
-        f1.imprime();
-        f2.imprime();
-        f3.imprime();
-
-        Funcionario.mediaSalario(f1.salary, f2.salary, f3.salary);
+        f1.mediaSalario();
     }
 }
