@@ -1,4 +1,4 @@
-package portfolio.breno.maratonajava.javacore.Rdatas.test;
+package portfolio.breno.maratonajava.javacore.Sformatacao.test;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -19,7 +19,7 @@ public class LocaleTest01 {
 
         System.out.println(d1.format(c.getTime()));
         System.out.println(d2.format(c.getTime()));
-        System.out.println(d2.format(c.getTime()));
+        System.out.println(d3.format(c.getTime()));
 
         System.out.println(lBrazil.getDisplayCountry(lItaly));
     }
