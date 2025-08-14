@@ -20,7 +20,7 @@ public class ZipOutputStreamTest01 {
              DirectoryStream<Path> directoryStream = Files.newDirectoryStream(zipados);
         ) {
             for (Path file : directoryStream) {
-                // 4 entapas para zipar:
+                // 3 entapas para zipar:
                 //Etapa 1: Preparação do objeto
                 new ZipEntry(file.getFileName().toString());
 
