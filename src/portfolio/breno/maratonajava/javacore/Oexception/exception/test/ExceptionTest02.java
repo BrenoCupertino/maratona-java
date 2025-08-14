@@ -9,7 +9,7 @@ public class ExceptionTest02 {
     }
 
     /* Em metodos privados, como são os metodos da própria classe que pode chama-lo, é interessante utilizar
-    o try/catch. No entento, em metodos públicos, não fazemos ideia de quem pode chamar o metódo. Nesse caso,
+    o try/catch. No entanto, em metodos públicos, não fazemos ideia de quem pode chamar o metódo. Nesse caso,
     passamos a responsabilidade pra quem chamou.*/
 
     public static void criarArquivo() throws IOException {
