@@ -31,7 +31,17 @@ public class Smartphone  {
         if (obj == null || this.getClass() != obj.getClass()) return false;
         if (this == obj) return true;
         Smartphone o = (Smartphone) obj;
-        return serialNumber.equals(o.getSerialNumber())
-                && brand.equals(o.getBrand());
+        return serialNumber.equals(o.getSerialNumber());
+    }
+
+    // Numero único que será gerado para os objetos.
+    /*
+    * x.equals(y) == true -> y.hashCode() == x.hashCode
+    * y.hashCode() == x.hashCode não significa x.equals(y) == true
+    * x.equals(y) != true -> y.hashCode() != x.hashCode
+    * */
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0: this.serialNumber.hashCode();
     }
 }
