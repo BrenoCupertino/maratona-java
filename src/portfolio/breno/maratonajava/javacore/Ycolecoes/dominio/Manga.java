@@ -1,0 +1,77 @@
+package portfolio.breno.maratonajava.javacore.Ycolecoes.dominio;
+
+import java.util.Objects;
+
+public class Manga implements Comparable<Manga> {
+    private Long  id;
+    private String nome;
+    private double preco;
+
+    public Manga(Long id, String nome, double preco) {
+        Objects.requireNonNull(id, "id não pode ser nulo!"); // Validação simples
+        Objects.requireNonNull(nome, "nome não pode ser nulo!");
+        this.id = id;
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Manga manga = (Manga) o;
+        return Double.compare(preco, manga.preco) == 0 && Objects.equals(id, manga.id) && Objects.equals(nome, manga.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nome, preco);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Manga{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", descricao='" + preco + '\'' +
+                '}';
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    @Override
+    //negativo se this < object
+    //positivo se this > object
+    //0 se this = object
+    public int compareTo(Manga manga) {
+        /*if (id <  manga.id) {
+            return -1;
+        }  else if (id.equals(manga.getId())) {
+            return 0;
+        } else {
+            return 1;
+        }*/
+        return id.compareTo(manga.id); // Delegando a comparação para o Long
+    }
+}
