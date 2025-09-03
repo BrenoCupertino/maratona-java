@@ -13,4 +13,8 @@ public class Carro {
                 "nome='" + nome + '\'' +
                 '}';
     }
+
+    public String getNome() {
+        return nome;
+    }
 }
