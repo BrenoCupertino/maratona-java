@@ -30,5 +30,8 @@ public class StreamsTest11 {
         System.out.println(lightNovels.stream().collect(Collectors.summingDouble(LightNovel::getPrice)));
 
         System.out.println(lightNovels.stream().collect(Collectors.summarizingDouble(LightNovel::getPrice)));
+
+        String titles = lightNovels.stream().map(LightNovel::getTitle).collect(Collectors.joining(", "));
+        System.out.println(titles);
     }
 }

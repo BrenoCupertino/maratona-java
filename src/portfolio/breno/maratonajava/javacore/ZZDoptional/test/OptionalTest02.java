@@ -17,5 +17,7 @@ public class OptionalTest02 {
         Anime anime = MangaRepository.findByTitle("Titulo 4").
                 orElseGet(() -> new Anime(4, "Titulo 4", 200));
         System.out.println(anime);
+
+        System.out.println();
     }
 }
